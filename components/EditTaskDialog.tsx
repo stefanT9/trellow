@@ -5,9 +5,12 @@ import { TasksContext } from "../store/TasksContext";
 
 export default function EditTaskDialog(props: ModalProps) {
   const [form] = Form.useForm<Partial<Task>>();
-  const { functions } = useContext(TasksContext);
+  const { functions, state } = useContext(TasksContext);
   const saveTask = (task: Partial<Task>) => {
-    functions.updateTask(task);
+    functions.updateTask({
+      ...state.selectedTask,
+      ...task,
+    });
   };
 
   return (
