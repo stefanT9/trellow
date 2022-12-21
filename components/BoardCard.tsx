@@ -20,6 +20,7 @@ export function BoardCard(props: BoardCardProps) {
         title={board.title}
         actions={[
           <Button
+            key="1"
             onClick={(evt) => {
               evt.preventDefault();
             }}

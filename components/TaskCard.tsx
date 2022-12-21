@@ -25,6 +25,7 @@ export function TaskCard(props: TaskCardProps) {
       title={task.title}
       actions={[
         <Button
+          key="1"
           disabled={currentIdx === 0}
           onClick={() =>
             functions.updateTask({
@@ -38,13 +39,14 @@ export function TaskCard(props: TaskCardProps) {
         >
           <LeftOutlined />
         </Button>,
-        <Button onClick={() => functions.deleteTask(task)}>
+        <Button key="2" onClick={() => functions.deleteTask(task)}>
           <DeleteOutlined />
         </Button>,
-        <Button onClick={() => functions.selectTask(task)}>
+        <Button key="3" onClick={() => functions.selectTask(task)}>
           <EditOutlined />
         </Button>,
         <Button
+          key="4"
           disabled={currentIdx === selectedBoard?.categories.length - 1}
           onClick={() =>
             functions.updateTask({
