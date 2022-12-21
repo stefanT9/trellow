@@ -76,7 +76,7 @@ export default function TasksPage({ boardId }: any) {
         <>
           {console.log("board=>", selectedBoard?.categories)}
           {selectedBoard?.categories.map((category) => (
-            <Col span={4}>
+            <Col span={4} key={category}>
               <Typography.Title style={{ textAlign: "center" }}>
                 <Input
                   defaultValue={category}
@@ -101,7 +101,7 @@ export default function TasksPage({ boardId }: any) {
               {state.tasks
                 .filter(({ status }) => category === status)
                 .map((task) => (
-                  <TaskCard task={task} />
+                  <TaskCard task={task} key={task._id} />
                 ))}
             </Col>
           ))}
