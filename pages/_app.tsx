@@ -14,7 +14,6 @@ export async function getServerSideProps() {
 }
 
 export default function App({ Component, pageProps }: AppProps) {
-  console.log(styles);
   return (
     <ConfigProvider
       theme={{

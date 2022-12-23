@@ -90,10 +90,6 @@ export default function BoardsProvider({ children }: any) {
   };
 
   const createBoard = (board: Partial<Board>) => {
-    console.log("am doing dis", {
-      ...board,
-      categories: [],
-    });
     return axios
       .post(`/api/boards`, {
         ...board,

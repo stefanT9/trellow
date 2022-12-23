@@ -74,7 +74,6 @@ export default function TasksPage({ boardId }: any) {
       </Head>
       <Row justify="center" align="top">
         <>
-          {console.log("board=>", selectedBoard?.categories)}
           {selectedBoard?.categories.map((category) => (
             <Col span={4} key={category}>
               <Typography.Title style={{ textAlign: "center" }}>
